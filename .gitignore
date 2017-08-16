@@ -1,0 +1,6 @@
+node_modules/
+credentials.txt
+nodemon_config.js
+ecosystem.config.js
+files/
+uploads/

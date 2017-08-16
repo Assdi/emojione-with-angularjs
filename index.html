@@ -1,0 +1,57 @@
+<html>
+<head>
+<style> .ng-cloak { display: none !important; }
+
+.emojione {
+    text-indent: -9999em;
+    image-rendering: optimizeQuality;
+    font-size: inherit;
+    height: 25px;
+    width: 25px;
+    top: -3px;
+    position: relative;
+    display: inline-block;
+    margin: 0 .15em;
+    line-height: normal;
+    vertical-align: middle;
+    background-image: url(emojione.sprites.png);
+    /* background-repeat: no-repeat; */
+    </style>
+<link rel="stylesheet" href="components/emojionearea/dist/emojionearea.min.css">
+
+<title>
+emoji example 
+</title>
+
+</head>
+<body ng-app="emojiApp" ng-controller="mainCtrl">
+
+<div style="width:30%">
+<input type="text"  ng-model="Comment.Text" id="emojionearea2" placeholder="Write a comment...">
+</div>
+{{Comment.Text}}
+
+<span  class="ng-cloak" emojify-it="😁😂😃asd😶😚😙"></span> 
+<br>
+<span id='asad'></span>
+<button ng-click="emo()">clcik me </button>
+<script src="components/jquery/dist/jquery.js"></script>
+
+
+<script src="components/angular/angular.js"></script>
+<script src="components/emojionearea/dist/emojionearea.min.js"></script>
+<script src="components/angular-sanitize/angular-sanitize.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</body>
+   <script>
+
+$(function(){
+    	$("#emojionearea2").emojioneArea({
+  	pickerPosition: "bottom",
+    tonesStyle: "radio"
+  });
+    })
+  </script>
+<!-- <script type="text/javascript" src="emojify.directive.js"></script> -->
+
+</html>
